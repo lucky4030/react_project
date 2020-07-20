@@ -19,7 +19,7 @@ class Detail extends Component{
               <p>--{com.author} </p>
               </div>
               <div className="col-12 col-md-8 m-0">
-              <p> ( {com.date.slice(0,10)} )</p>
+              <p> ({new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit' }).format(new Date(Date.parse(com.date)))} )</p>
               </div>
             </div>
             );
